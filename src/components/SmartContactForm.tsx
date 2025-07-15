@@ -41,8 +41,7 @@ const SmartContactForm = () => {
     timeline: '',
     techPreferences: [],
     startDate: '',
-    additionalNotes: '',
-    // files: [] // removed
+    additionalNotes: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -226,7 +225,7 @@ const SmartContactForm = () => {
   const isStepValid = () => {
     switch (currentStep) {
       case 1:
-        return formData.fullName && formData.email && formData.clientType;
+        return formData.fullName && formData.email && formData.phone && formData.clientType;
       case 2:
         return formData.serviceType && formData.projectTitle && formData.description;
       case 3:
@@ -278,7 +277,7 @@ const SmartContactForm = () => {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
+                Phone Number *
               </label>
               <input
                 type="tel"
@@ -564,7 +563,7 @@ const SmartContactForm = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto pt-24">
+    <div className="max-w-4xl mx-auto pt-24 mb-6">
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
@@ -639,11 +638,11 @@ const SmartContactForm = () => {
       </div>
 
       {/* Auto-save indicator */}
-      <div className="text-center mt-4">
+      {/* <div className="text-center mt-4 mb-4">
         <p className="text-sm text-gray-500">
           💾 Your progress is automatically saved
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

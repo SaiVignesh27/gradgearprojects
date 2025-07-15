@@ -9,7 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
+            <Link to='/'>
             <h3 className="text-2xl font-bold text-blue-400">GRADGEAR</h3>
+            </Link>
             <p className="text-gray-300 text-sm">
               One Gear. Many Solutions.
             </p>
