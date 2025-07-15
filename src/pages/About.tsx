@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Target, Code, Users, Award, User } from 'lucide-react';
+=======
+import { Target, Code, Users, Award } from 'lucide-react';
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
 
 const About = () => {
   return (
@@ -42,11 +46,19 @@ const About = () => {
               <div className="bg-blue-600 rounded-2xl p-8 text-white">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
+<<<<<<< HEAD
                     <div className="text-3xl font-bold mb-2">5+</div>
                     <div className="text-blue-100">Projects Completed</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold mb-2">100%</div>
+=======
+                    <div className="text-3xl font-bold mb-2">50+</div>
+                    <div className="text-blue-100">Projects Completed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold mb-2">95%</div>
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
                     <div className="text-blue-100">Client Satisfaction</div>
                   </div>
                   <div className="text-center">
@@ -179,6 +191,7 @@ const About = () => {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 md:p-12 rounded-2xl border border-blue-200">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-48 h-48 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+<<<<<<< HEAD
                   <span className="text-6xl font-bold text-white">KSV</span>
                 </div>
                 <div className="text-center md:text-left">
@@ -187,6 +200,16 @@ const About = () => {
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     Hello! I'm Sai Vignesh, the founder of GRADGEAR. As a passionate developer and tech enthusiast, 
+=======
+                  <span className="text-6xl font-bold text-white">VK</span>
+                </div>
+                <div className="text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Vignesh Kadiri
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    Hello! I'm Vignesh, the founder of GRADGEAR. As a passionate developer and tech enthusiast, 
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
                     I started this journey to bridge the gap between innovative technology and practical solutions. 
                     My experience in both academic projects and real-world applications has shaped GRADGEAR into 
                     a platform that truly understands the needs of students and businesses.
@@ -199,7 +222,11 @@ const About = () => {
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                     <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Full-Stack Developer</span>
+<<<<<<< HEAD
                     <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">AI/ML Developer</span>
+=======
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">AI/ML Engineer</span>
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
                     <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Tech Consultant</span>
                   </div>
                 </div>

@@ -145,12 +145,17 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
+<<<<<<< HEAD
                   <a 
                     href="mailto:gradgearprojects@gmail.com"
                     className="text-gray-600">
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     gradgearprojects@gmail.com
                   </a>
+=======
+                  <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                  <p className="text-gray-600">gradgearprojects@gmail.com</p>
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
                 </div>
               </div>
               <div className="flex items-start gap-4">

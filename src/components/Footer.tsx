@@ -31,7 +31,11 @@ const Footer = () => {
               <Link to="/services" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
                 Services
               </Link>
+<<<<<<< HEAD
               <Link to="/smart-contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+=======
+              <Link to="/contact" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
                 Get a Quote
               </Link>
               <Link to="/projects" className="text-gray-300 hover:text-blue-400 transition-colors text-sm">
@@ -58,9 +62,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-blue-400" />
+<<<<<<< HEAD
                 <a 
                   href='https:gradgearprojects.vercel.app'
                   className="text-gray-300 text-sm">gradgear.com</a>
+=======
+                <span className="text-gray-300 text-sm">gradgear.com</span>
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
               </div>
             </div>
 

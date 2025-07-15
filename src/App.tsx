@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,6 +15,7 @@ import Contact from './pages/Contact';
 import Testimonials from './pages/Testimonials';
 import SmartContactForm from './components/SmartContactForm';
 
+<<<<<<< HEAD
 // ScrollToTop component
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,6 +29,11 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+=======
+function App() {
+  return (
+    <Router>
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
       <div className="min-h-screen bg-white">
         <Header />
         <main>

@@ -26,6 +26,7 @@ const Home = () => {
 
   const testimonials = [
     {
+<<<<<<< HEAD
       name: "Faang Tech Code Lab",
       project: "LMS Portal for TECHLAB",
       rating: 5,
@@ -42,6 +43,24 @@ const Home = () => {
       project: "Home Groceries Delivery App",
       rating: 5,
       feedback: "Our grocery delivery app was beautifully designed and highly functional. GRADGEAR understood our business needs and executed it brilliantly with Firebase realtime updates."
+=======
+      name: "Priya Sharma",
+      project: "Final Year Project",
+      rating: 5,
+      feedback: "GRADGEAR delivered an exceptional AI-powered recommendation system. The code quality and documentation were outstanding!"
+    },
+    {
+      name: "Tech Solutions Inc.",
+      project: "Company Website",
+      rating: 5,
+      feedback: "Professional, timely, and exactly what we needed. Our new website has significantly improved our online presence."
+    },
+    {
+      name: "Rahul Kumar",
+      project: "E-commerce Platform",
+      rating: 5,
+      feedback: "The team understood our requirements perfectly and delivered a robust solution within budget and timeline."
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
     }
   ];
 
@@ -63,7 +82,11 @@ const Home = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
+<<<<<<< HEAD
                 to="/smart-contact"
+=======
+                to="/contact"
+>>>>>>> 1d762a98c772acf83cddba058589994c9ebb4e4f
                 className="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
               >
                 📩 Get a Quote
