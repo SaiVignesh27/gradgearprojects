@@ -6,8 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "start": "vite preview",
     "preview": "vite preview"
+  },
+  "homepage": ".",
+  "keywords": [
+    "vercel"
+  ],
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
