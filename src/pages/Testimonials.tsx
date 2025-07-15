@@ -235,78 +235,61 @@ const Testimonials = () => {
                 {showToast.message}
               </div>
             )}
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="relative">
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className={`peer w-full px-4 py-3 border ${errors.name ? 'border-red-400' : 'border-gray-300'} rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-transparent placeholder-transparent transition-all`}
-                    placeholder=""
-                    aria-describedby="name-error"
-                  />
-                  <label htmlFor="name" className={`absolute left-4 top-3 text-gray-500 transition-all duration-200 bg-white px-1 pointer-events-none
-                    peer-focus:-top-5 peer-focus:text-xs peer-focus:text-blue-600
-                    ${formData.name ? '-top-5 text-xs text-blue-600' : 'peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500'}`}>Name *</label>
-                  {errors.name && <span id="name-error" className="text-red-500 text-xs mt-1 block">{errors.name}</span>}
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {[
+                { id: 'name', label: 'Name', type: 'text' },
+                { id: 'email', label: 'Email', type: 'email' },
+                { id: 'project', label: 'Project Name', type: 'text' },
+                { id: 'feedback', label: 'Feedback', type: 'textarea' }
+              ].map(({ id, label, type }) => (
+                <div key={id}>
+                  <label htmlFor={id} className="block text-sm font-medium text-gray-700 mb-1">{label} *</label>
+                  {type === 'textarea' ? (
+                    <textarea
+                      id={id}
+                      name={id}
+                      value={formData[id as keyof typeof formData] as string}
+                      onChange={handleChange}
+                      required
+                      rows={5}
+                      maxLength={MAX_FEEDBACK_LENGTH}
+                      className={`w-full px-4 py-3 border ${errors[id as keyof typeof errors] ? 'border-red-400' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500`}
+                    />
+                  ) : (
+                    <input
+                      type={type}
+                      id={id}
+                      name={id}
+                      value={formData[id as keyof typeof formData] as string}
+                      onChange={handleChange}
+                      required
+                      className={`w-full px-4 py-3 border ${errors[id as keyof typeof errors] ? 'border-red-400' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500`}
+                    />
+                  )}
+                  {id === 'feedback' && (
+                    <div className="flex justify-between items-center mt-1">
+                      {errors.feedback && <span className="text-red-500 text-xs">{errors.feedback}</span>}
+                      <span className="text-xs text-gray-400 ml-auto">{formData.feedback.length}/{MAX_FEEDBACK_LENGTH}</span>
+                    </div>
+                  )}
+                  {id !== 'feedback' && errors[id as keyof typeof errors] && <p className="text-red-500 text-xs mt-1">{errors[id as keyof typeof errors]}</p>}
                 </div>
-                <div className="relative">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className={`peer w-full px-4 py-3 border ${errors.email ? 'border-red-400' : 'border-gray-300'} rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-transparent placeholder-transparent transition-all`}
-                    placeholder=""
-                    aria-describedby="email-error"
-                  />
-                  <label htmlFor="email" className={`absolute left-4 top-3 text-gray-500 transition-all duration-200 bg-white px-1 pointer-events-none
-                    peer-focus:-top-5 peer-focus:text-xs peer-focus:text-blue-600
-                    ${formData.email ? '-top-5 text-xs text-blue-600' : 'peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500'}`}>Email *</label>
-                  {errors.email && <span id="email-error" className="text-red-500 text-xs mt-1 block">{errors.email}</span>}
-                </div>
-              </div>
-              <div className="relative">
-              <input
-                    type="project"
-                    id="project"
-                    name="project name"
-                    value={formData.project}
-                    onChange={handleChange}
-                    required
-                    className={`peer w-full px-4 py-3 border ${errors.project ? 'border-red-400' : 'border-gray-300'} rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-transparent placeholder-transparent transition-all`}
-                    placeholder=""
-                    aria-describedby="project-error"
-                  />
-                  <label htmlFor="project" className={`absolute left-4 top-3 text-gray-500 transition-all duration-200 bg-white px-1 pointer-events-none
-                    peer-focus:-top-5 peer-focus:text-xs peer-focus:text-blue-600
-                    ${formData.project ? '-top-5 text-xs text-blue-600' : 'peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500'}`}>Project Name *</label>
-                  {errors.project && <span id="project-error" className="text-red-500 text-xs mt-1 block">{errors.project}</span>}
-              </div>
-              <div className="relative">
+              ))}
+              <div>
+                <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-1">Project Type *</label>
                 <select
                   id="projectType"
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleChange}
                   required
-                  className={`peer w-full px-4 py-3 border ${errors.projectType ? 'border-red-400' : 'border-gray-300'} rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-transparent placeholder-transparent transition-all`}
-                  aria-describedby="projectType-error"
+                  className={`w-full px-4 py-3 border ${errors.projectType ? 'border-red-400' : 'border-gray-300'} rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500`}
                 >
-                  <option value="" disabled hidden></option>
+                  <option value="" disabled hidden>Select type</option>
                   <option value="Student Project">Student Project</option>
                   <option value="Business Website">Business Project</option>
                 </select>
-                <label htmlFor="projectType" className={`absolute left-4 top-3 text-gray-500 transition-all duration-200 bg-white px-1 pointer-events-none
-                  peer-focus:-top-5 peer-focus:text-xs peer-focus:text-blue-600
-                  ${formData.projectType ? '-top-5 text-xs text-blue-600' : 'peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500'}`}>Project Type *</label>
-                {errors.projectType && <span id="projectType-error" className="text-red-500 text-xs mt-1 block">{errors.projectType}</span>}
+                {errors.projectType && <p className="text-red-500 text-xs mt-1">{errors.projectType}</p>}
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Rating *</label>
@@ -328,27 +311,6 @@ const Testimonials = () => {
                   <span className="ml-2 text-sm text-gray-600">
                     {formData.rating} star{formData.rating !== 1 ? 's' : ''}
                   </span>
-                </div>
-              </div>
-              <div className="relative">
-                <textarea
-                  id="feedback"
-                  name="feedback"
-                  value={formData.feedback}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  maxLength={MAX_FEEDBACK_LENGTH}
-                  className={`peer w-full px-4 py-3 border ${errors.feedback ? 'border-red-400' : 'border-gray-300'} rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-transparent placeholder-transparent transition-all`}
-                  placeholder=""
-                  aria-describedby="feedback-error feedback-counter"
-                />
-                <label htmlFor="feedback" className={`absolute left-4 top-3 text-gray-500 transition-all duration-200 bg-white px-1 pointer-events-none
-                  peer-focus:-top-5 peer-focus:text-xs peer-focus:text-blue-600
-                  ${formData.feedback ? '-top-5 text-xs text-blue-600' : 'peer-placeholder-shown:top-3 peer-placeholder-shown:text-gray-500'}`}>Feedback *</label>
-                <div className="flex justify-between items-center mt-1">
-                  {errors.feedback && <span id="feedback-error" className="text-red-500 text-xs">{errors.feedback}</span>}
-                  <span id="feedback-counter" className="text-xs text-gray-400 ml-auto">{formData.feedback.length}/{MAX_FEEDBACK_LENGTH}</span>
                 </div>
               </div>
               <div className="flex items-center gap-3">
