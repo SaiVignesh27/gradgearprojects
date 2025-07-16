@@ -167,7 +167,7 @@ const About = () => {
       </section>
 
       {/* Meet the Founder */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -179,7 +179,7 @@ const About = () => {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 md:p-12 rounded-2xl border border-blue-200">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-48 h-48 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-6xl font-bold text-white">KSV</span>
+                  <span className="text-6xl font-bold text-white">KSV </span>
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -196,6 +196,48 @@ const About = () => {
                     I'm committed to delivering solutions that not only meet your requirements but exceed your expectations. 
                     Every project at GRADGEAR is handled with the same dedication and attention to detail that I would 
                     want for my own work.
+                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Full-Stack Developer</span>
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">AI/ML Developer</span>
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Tech Consultant</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meet the Team
+            </h2>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 md:p-12 rounded-2xl border border-blue-200">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-48 h-48 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-6xl font-bold text-white">GradGear</span>
+                </div>
+                <div className="text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  GRADGEAR – Ideas to Execution. Projects to Platforms.
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  At GRADGEAR, we're more than just developers — we're a passionate team of innovators, designers, and tech consultants dedicated to bringing your ideas to life.
+                  Our team brings a unique blend of expertise across full-stack development, AI/ML, UI/UX design, and business technology consulting. From academic projects to real-world platforms, we've built solutions that empower students, startups, and established businesses to thrive online.
+                  </p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  We believe in collaboration, creativity, and client-centric solutions. Every project we work on is handled with attention to detail, transparency, and a drive for excellence.
+                  Whether you're launching a portfolio, a business site, or a scalable platform — GRADGEAR is your trusted tech partner.
+                  🚀 What We Do Best:
+                  Web & App Development
+                  AI/ML Integration
+                  Custom LMS & E-commerce Platforms
+                  Technical Consulting & Support
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                     <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Full-Stack Developer</span>
