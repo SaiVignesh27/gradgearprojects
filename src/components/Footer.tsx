@@ -61,7 +61,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-blue-400" />
                 <a 
-                  href='https:gradgearprojects.vercel.app'
+                  href='https://gradgearprojects.vercel.app'
                   className="text-gray-300 text-sm">gradgear.com</a>
               </div>
             </div>
