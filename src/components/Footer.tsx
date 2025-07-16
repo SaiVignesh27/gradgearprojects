@@ -69,21 +69,25 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex space-x-4 pt-4">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/grad-gear/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.instagram.com/gradgear_projects/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="#" 
+                href="/contact" 
                 className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
                 aria-label="WhatsApp"
               >
