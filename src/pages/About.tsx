@@ -220,30 +220,27 @@ const About = () => {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 md:p-12 rounded-2xl border border-blue-200">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-48 h-48 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-6xl font-bold text-white">GradGear</span>
+                  <span className="text-3xl font-bold text-white">GradGear</span>
                 </div>
                 <div className="text-center md:text-left">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   GRADGEAR – Ideas to Execution. Projects to Platforms.
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
                   At GRADGEAR, we're more than just developers — we're a passionate team of innovators, designers, and tech consultants dedicated to bringing your ideas to life.
                   Our team brings a unique blend of expertise across full-stack development, AI/ML, UI/UX design, and business technology consulting. From academic projects to real-world platforms, we've built solutions that empower students, startups, and established businesses to thrive online.
                   </p>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-4 leading-relaxed">
                   We believe in collaboration, creativity, and client-centric solutions. Every project we work on is handled with attention to detail, transparency, and a drive for excellence.
                   Whether you're launching a portfolio, a business site, or a scalable platform — GRADGEAR is your trusted tech partner.
-                  🚀 What We Do Best:
-                  Web & App Development
-                  AI/ML Integration
-                  Custom LMS & E-commerce Platforms
-                  Technical Consulting & Support
                   </p>
-                  <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Full-Stack Developer</span>
-                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">AI/ML Developer</span>
-                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Tech Consultant</span>
-                  </div>
+                  <h4 className="text-lg font-semibold text-gray-800 mb-2 mt-6">🚀 What We Do Best:</h4>
+                  <ul className="list-disc list-inside text-gray-700 mb-6">
+                    <li>Web & App Development</li>
+                    <li>AI/ML Integration</li>
+                    <li>Custom LMS & E-commerce Platforms</li>
+                    <li>Technical Consulting & Support</li>
+                  </ul>
                 </div>
               </div>
             </div>
